@@ -19,11 +19,6 @@ pipeline {
                 echo 'my pipeline execution: deploying the application...'
             }
         }
-        
-        post {
-            success{
-                echo 'Successful Pipeline'
-            }
-        }
+       
     }
 }
