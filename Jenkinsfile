@@ -4,7 +4,25 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'my pipeline execution'
+                echo 'my pipeline execution: building the application...'
+            }
+        }
+        
+        stage('test') {
+            steps {
+                echo 'my pipeline execution: testing the application...'
+            }
+        }
+        
+        stage('deploy') {
+            steps {
+                echo 'my pipeline execution: deploying the application...'
+            }
+        }
+        
+        post {
+            success{
+                echo 'Successful Pipeline'
             }
         }
     }
